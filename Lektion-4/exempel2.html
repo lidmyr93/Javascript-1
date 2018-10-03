@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exempel 2 </h1>
+    
+    <script>
+  "use strict"; // tar bort användadet av automatisk deklaration
+  //Deklarera variabler
+
+    var namn1;
+    let namn2;
+
+    //Tilldela
+
+    namn1 = "Magnus";
+    namn2 = "Lidmyr";
+
+    // Initiera (deklarera och tilldela)
+
+    let namn3 ="MagnusLidmyr";
+    let namn4 = " KTH";
+
+    // Initiera flera variabler
+
+    let firstName = "Magnus",
+        lastName  = "Lidmyr",
+        age       = 25,
+        mobile    ="0xx-0722323";
+
+    let skola = "Nackademin"; // En automatisk deklaration av en variabel    ( tydligen inte bra)
+    
+    skola = namn4; // Kopierar "KTH" in i värdet skola
+
+    console.log(namn1);
+    console.log(namn2);
+    console.log(namn3);
+    console.log(firstName);
+    console.log(lastName);
+    console.log(age);
+    console.log(mobile);
+    console.log(skola);
+    //console.log(bil); // ReferenceError ( inte deklarerad variabel)
+
+    // skapa en konstant
+
+    const MAX_VALUE = 10;
+   // MAX_VALUE = 20; // Får inte ändra konstanter
+    console.log(MAX_VALUE);
+
+   // let 123; // får inte börja med siffror, måste börja med en bokstav
+   // let x1, x2, x3; // Exempel som är korrekt
+
+   // let let;//FEL
+   // let var; //FEL får inte använda reserverade ord samt nyckelord
+
+    
+
+
+
+    </script>
+</body>
+</html>
