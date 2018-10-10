@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ovning4</title>
+</head>
+<body>
+    
+   
+<script>
+      let pris = prompt ("Vad kostar varan?");
+      let moms = prompt ("Vad betalade du i moms?");
+      
+      alert(total(pris,moms));
+      
+
+      function total (x1,x2){
+          return "Din vara utan moms skulla kostat " + (1 == x2)/x1 + " kronor" + "\n" + "Du betalade " + (x2/100)*x1 + " i moms" + "\n" + x2 + "% Var momsen";
+      }
+
+    
+
+    </script>
+
+</body>
+</html>
