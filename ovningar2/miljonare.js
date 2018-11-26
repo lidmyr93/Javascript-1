@@ -10,7 +10,7 @@ ihop minst en miljon. */
 
 let dag = 0;
 let antaldagar = 0;
-let lon = 170;
+let lon = 500;
 let totallon = 0;
 
 while(totallon <= 1000000){
