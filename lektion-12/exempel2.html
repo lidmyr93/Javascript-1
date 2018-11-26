@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exempel 2</title>
+</head>
+<body>
+    <h1>Exempel 3</h1>
+    <p>Ändra CSS med DOM</p>
+    
+    <h1 id = 'one'>En Rubrik</h1>
+    <script>
+        let c = document.getElementById('one');
+        // Ändra färg med CSS , egenskap style
+        c.style.color = 'blue';
+        // Ändra teckenstorled med CCS
+        c.style.fontSize = '50px';
+        // Ändra text till versaler med CSS
+        c.style.textTransform = 'uppercase';
+        // Dölja ett element med CSS
+        c.style.display = 'none';
+        
+        // Ändra CSS med egenskapen body och style
+        document.body.style.backgroundColor = 'red';
+        // Vad är body?
+        console.log(document.body);
+        // Body är en egenskap som returnerar elementet body med alla noder("childs") som finns i body.
+    
+    </script>
+    
+</body>
+</html>

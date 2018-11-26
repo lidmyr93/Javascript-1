@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moms</title>
+</head>
+<body>
+    <h1>Exempel 9</h1>
+    <p>Ange pris exkl.moms :</p>
+        <input type="text" id='price1'>
+    <button id='btnPrice'>Beräkna pris inkl.moms</button>
+    <p id='price2'>Resultat</p>
+
+    <script>
+    // Hämta nodvändiga element
+    let elPrice1 = document.getElementById('price1');
+    let elPrice2 = document.getElementById('price2');
+    let btnPrice = document.getElementById('btnPrice');
+
+    // Koppla event
+    btnPrice.onclick = getPrice; // obs inga paranteser, annars körs funcitonen på rad 23 och struntar i alla events
+
+    // Skapa nödvändiga funktioner
+
+    function getPrice(){
+        elPrice2.innerHTML = elPrice1.value * 1.25;
+    }
+
+    </script>
+    
+</body>
+</html>

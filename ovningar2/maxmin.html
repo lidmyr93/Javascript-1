@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Maxmin</title>
+</head>
+<body>
+    <script>
+/*Skriv ett program som läser in
+ett godtyckligt antal tal
+(även negativa) via prompt.
+När användaren klickar
+på knappen Avbryt
+så skall programmet skriva ut
+det största och det minsta
+av de inlästa talen.*/
+
+
+ let arr = [];
+
+    for(;;){
+     arr.push(prompt('Skriv in ett tal')); 
+     if (isNaN(arr[arr.length-1]) || arr[arr.length-1] == "" || arr[arr.length-1] == " "){ // Om inte en siffra , ta bort från arrayen
+        arr.pop();
+        alert('Du har inte matat in en siffra, vi tar bort senaste inmatningen.\nFortsätt genom att trycka ok');
+     continue;
+     }
+     else if (arr[arr.length-1] === null){ // Om avbryt break
+         break;
+     }
+}
+arr.pop() // För att ta bort sista indexet av arrayen som är Null.
+let max = Math.max(...arr);
+let min = Math.min(...arr);
+      console.log(arr);
+      document.write('Störa talet var ' + max + ' Minsta talet var ' + min);
+              
+        
+            
+        
+
+    </script>
+</body>
+
+</html>

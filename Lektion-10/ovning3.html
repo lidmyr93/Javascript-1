@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>betyg</title>
+</head>
+<body>
+    <script>
+        let points = +prompt('Hur mycket poäng fick du?');
+
+        function grade(points){
+            let betyg;
+            switch(true){
+                
+                case (points<25): betyg = 'F'; break;
+                case (points<30): betyg = 'E'; break;
+                case (points<35): betyg = 'D'; break;
+                case (points<40): betyg = 'C'; break;
+                case (points<45): betyg = 'B'; break;
+                case (points<=50): betyg = 'A'; break;
+                
+            }
+
+            return 'Du fick ' + betyg + ' i betyg';
+        }
+        alert(grade(points));
+
+        
+        </script>
+
+</body>
+</html>

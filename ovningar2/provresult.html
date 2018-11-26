@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prov resultat</title>
+</head>
+<body>
+    <h1>Prov resultat</h1>
+    <script>
+/*På programmeringsprovet kan man
+få högst 50 poäng.
+Gränsen för betyget G är 50% och
+för betygen VG är 70%.
+Skriv ett program som läser in (via
+en prompt) poängen för en student
+och som visar vilket betyg hon eller
+han fått på provet.*/
+while(true){
+let points = +prompt('Hur många poäng fick du på provet?');
+let maxpoints = 50;
+let gradeG = maxpoints * 0.5;
+let gradeVG = maxpoints * 0.70;
+if (points > 50){
+    alert('Du har anget för mycket poäng');
+continue;
+}
+else if (points >= gradeVG){
+alert('Du fick VG på provet');
+break;
+}
+else if( points >= gradeG){
+alert('Du fick G på provet');
+break;
+}
+else{
+alert('Du fick IG på provet');
+break;
+}
+}
+
+
+    </script>
+    
+</body>
+</html>

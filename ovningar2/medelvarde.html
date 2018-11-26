@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Medelvärde</title>
+</head>
+<body>
+    <script>
+    let arr = [];
+
+    while(true){// Continune
+     arr.push(prompt('Skriv in tal'));
+         if(isNaN(arr[arr.length-1]) || arr[arr.length-1] == "" || arr[arr.length-1] == " "){
+         arr.pop() // Tar bort felaktig data från arrayen
+         alert('Inte ett nummer'); 
+          continue;
+     }
+         else if(arr[arr.length-1] === null){ // Break och uträkningen börjar
+          break;
+     }
+
+ }//Break
+    arr.pop();//Tar bort null, då jag vill använda arr.length för räkna medelvärde
+//Konvertera array innehållet från numberstrings till number med map()
+    let numbarr = arr.map(Number);
+
+ // Uträkningen av medelvärdet av arrayen
+    let sum = 0;
+    for(let i = 0; i<arr.length; i++){
+    sum += numbarr[i]
+}
+
+let medelvarde = sum / arr.length;
+document.write('Medelvärdet av dina inmatade tal är = ' + medelvarde);
+
+
+
+    
+    
+    </script>
+    
+</body>
+</html>

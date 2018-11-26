@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body> 
+    <h1> Klocka </h1>
+    <div id ="watchtimer" ></div>
+    <script>
+        let watch = document.getElementById("watchtimer");  
+        function klocka(){
+            
+            let today = new Date();
+            let t = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            timer = (t + ':'+ m+':' +s );
+            watch.textContent = timer
+            
+         if ( m < 10){
+             '0' + m;
+         }
+        };
+        if ( s < 10){
+         0 + s;
+         }
+        setInterval(klocka,1000);
+            </script>
+</body>
+</html>

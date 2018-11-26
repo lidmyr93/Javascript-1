@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minuter till timmar</title>
+</head>
+<body>
+    <script>
+        while(true){//Continue
+            let antalMin = prompt('Minuter till timmar och minuter \nAnge antal minuter över 60');
+            if(antalMin === null) break;
+             if (antalMin < 60 || antalMin === undefined){
+                alert('Fel inmatning');
+                continue;
+             }
+            else{
+            alert(minutConvert(antalMin))
+            break;
+            }
+            
+        }
+        function minutConvert(n){
+                let minuter = n; // Lagrar antal minuter, onödig men får sta kvar
+                let hours   = minuter / 60; // delar antal minuter med 60 för att få antal timmar (ex 3,333)
+                let printHours = Math.floor(hours); // Rundar av hours för att få hela timmar
+                let minutes = (hours - printHours) * 60; // tar hours(3,3333) - avrundade hours för att få resten + 60 för att få det till minuter
+                let printMin = Math.round(minutes);// AVrundar minuter
+                return minuter + ' Minuter är ' + printHours + ' timmar och ' + printMin + ' minuter';
+            }
+        </script>
+</body>
+</html>

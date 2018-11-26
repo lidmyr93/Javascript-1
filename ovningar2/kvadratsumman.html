@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kvadratsumman</title>
+</head>
+<body>
+    <script>
+/*Skriv ett program som läser in två
+heltal via en enda prompt.
+Be användaren mata in talen i
+detta format: tal 1, tal 2 t.ex. 3,4
+Kontrollera att du får två heltal och
+visa lämpliga felmeddelanden vid
+felaktig inmatning.
+Beräkna kvadratsumman av talen
+(summan av talens kvadrater).
+Exempel:
+Kvadratsumman av 3 och 4 är 25.*/
+
+let n = prompt('Mata in två tal', 'tal1,tal2');
+n = n.split(',').map(Number);
+
+if (Number.isInteger(n[0]) && Number.isInteger(n[1]) && n.length < 3){
+let kvadSum = Math.pow(n[0], 2) + Math.pow(n[1], 2);
+alert('Kvadratsumman av ' + n[0] + ' och ' + n[1] + ' är ' + kvadSum);
+}
+else 
+alert('Något eller båda talen är inte ett heltal eller för många tal angivna.');
+
+        
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function ValueFunction(value) {
+ this.value = value;
+ this.getValue = function () {
+ return this.value;
+ }
+ this.setValue = function (a) {
+ this.value = a;
+ }
+}
+let valueTest = new ValueFunction(10);
+valueTest.setValue(20);
+console.log(valueTest.getValue());
+</script>
+</body>
+</html>

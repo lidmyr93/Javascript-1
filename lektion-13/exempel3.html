@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exempel 3</h1>
+    <p id='demo1'>Hej</p>
+    <p id='demo2'>Hej</p>
+    <p id='demo3'>Hej</p>
+
+    
+    <button onclick="changeText('demo1'); changeColor('demo1','red');">Klicka här för att ändra text på demo1</button>
+    <button onclick="changeText('demo2'); changeColor('demo2','green');">Klicka här för att ändra text på demo1</button>
+    <button onclick="changeText('demo3'); changeColor('demo3','blue');">Klicka här för att ändra text på demo1</button>
+    <!--<button onclick="changeFirstP()">Klicka här för att ändra första p</button>
+    <button onclick="changeSecondP(); changeColor()">Klicka här för att ändra andra p</button>-->
+    
+    <script>
+        function changeText(id){
+            let el1 = document.getElementById(id);
+            el1.innerHTML = 'Hello paragraph' + id;
+        }
+        function changeColor(id,color){
+            let el2 = document.getElementById(id, color);
+            el2.style.color = color;
+        }
+       /* function changeFirstP(){
+            let el1 = document.getElementById('demo');
+            el1.innerHTML = 'Paragraph one with id';
+            el1.style.color='red';
+        }
+        function changeSecondP(){
+            let el2 = document.getElementsByTagName('p')[1];
+            el2.innerHTML = 'Paragraph two without id';
+            
+        }
+        function changeColor(){
+            console.log('Inne i changecolor');
+            let el2 = document.getElementsByTagName('p')[1];
+        }*/
+
+    </script>
+</body>
+</html>

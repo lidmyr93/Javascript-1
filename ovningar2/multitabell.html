@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multiplikations tabell</title>
+</head>
+<body>
+    <h1>Multiplikations tabell</h1>
+    <script>
+    while(true){
+    let tal = prompt('Skriv in ett tal mellan 1 och 10\n för att se talets multiplikationstabell')
+    console.log(tal);
+    if (tal == null){
+    break;
+    }
+    else if(tal < 1 || tal > 10 || isNaN(tal)){
+        alert('Felaktig information');
+        continue;
+    }
+    else{
+        let tabell  = '';   
+     for (let i = 1; i <=10; i++){
+         tabell += i;
+        tabell += '*' + tal + ' = ';    
+        tabell +=  +i * tal;
+        tabell += '\n';
+        
+    }
+    alert(tabell);
+    break;
+}
+}
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Ternary-operatorn</h1>
+    <script>
+        function promptAge(){
+        let age = prompt ('Hur gammal är du');
+        console.log(age);
+        if (age === null || age === ''); { 
+ // om age inte får nåt värde(trycker avbryt)=avsluta, om age får ett tomt värde(trycker ok utan mata in data) = avsluta.
+            alert('Felaktig information');
+            return;
+        }
+            let voteable = '';
+            if (age<18){
+                voteable = 'Du får inte rösta';
+            }
+            else{
+                voteable = 'Du får rösta';
+            }
+            // Omvandla if-else logiken till ternary
+            // voteable = (age < 18) ? 'Du får inte rösta' : 'Du får rösta';
+            //          villkor   ? gör detta om sant   :  gör detta om falskt
+            alert(voteable);
+        }
+        promptAge();
+        
+        </script>
+</body>
+</html>

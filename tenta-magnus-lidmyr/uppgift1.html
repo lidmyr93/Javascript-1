@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uppgift 1</title>
+</head>
+<body>
+    
+    <script>
+let ranta = 1.035;
+let tabell = "";
+
+while(true){//continue;
+    // Användarens uppgifter
+     let sum = prompt('Hur mycket pengar vill du sätta in?');
+     let years= prompt('Hur många år ska pengarna stå inne?');
+
+// if och else if = kontroll om nån av inmatningen = 0 eller NaN > felmeddelande > continue
+  if(isNaN(sum) || isNaN(years)){
+      alert('Felaktig inmatning');
+      continue;
+  }// if
+  else if (sum == 0 || years == 0){
+      alert('Du kan inte sätta in 0kr eller sätta in pengarna i 0 år');
+      continue;
+  }//else if
+// godkänd inmatning
+  else{
+      //Loopar lika många gånger som antal years. Multiplicerar sum och ränta varje varv
+      //och tilldelar sum nytt värde. Samt tilldelar tabell > utskrift på ny rad och sum varje varv.
+      for (let i = 1; i <=years; i++){
+      sum *= ranta;
+      tabell += i + '    ' + sum.toFixed(2) + '\n';
+     }
+      break;
+ }//else
+
+}// while-break; 
+alert('År' + '    ' +  'Belopp\n' + tabell);
+
+
+
+
+    
+    </script>
+    
+</body>
+</html>

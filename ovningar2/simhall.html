@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simhall</title>
+</head>
+<body>
+    <h1>Simhallen</h1>
+    <script>
+/*På en simhall kan man antingen köpa ett
+årskort eller köpa en biljett vid varje
+besök.
+Skapa ett program som läser in (via en
+enda prompt) priset för ett årskort, priset
+för en biljett samt antalet gånger man
+planerar att simma under ett år.
+Därefter skall programmet visa (via en
+alert) om det lönar sig att köpa årskort
+eller inte.*/
+    let info = prompt('Skriv in priset för ett årskort, priset för en biljett och antal gånger du tänker besöka oss.\n'
+    + 'Ange i detta format:\n prisårskort,prisbiljett,antalbesök', 'prisårskort,prisbiljett,antalbesök'); // får en string array tillbaks
+    // Splittar string array vid varje , tecken
+    info = info.split(',');
+    prisår = info[0];
+    prisdag = info[1];
+    besok = info[2];
+    if (prisår > prisdag*besok)
+    alert ('Det lönar sig inte att köpa ett årskort');
+    else if(prisår == prisdag*besok)
+    alert('Samma kostnad köp vad du vill');
+    else alert('Det lönar sig att köpa ett årskort');
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exempel 8</title>
+</head>
+<body>
+    <h1>Exempel 8</h1>
+    <p>
+        Username:
+        <input type="text" id="username">
+    </p>
+    <p id="ufeedback"></p>
+    <p>
+        Password:
+        <input type="password" id="password">
+    </p>
+    <p id="pfeedback"></p>
+
+    <button>Register</button>
+
+    
+    <script>
+        let elUser = document.getElementById("username");
+        let elPass = document.getElementById("password");
+        let elUserMsg = document.getElementById("ufeedback");
+        let elPassMsg = document.getElementById("pfeedback");
+
+        // Kopplar event till funktioner
+        elUser.oninput = checkUsername;
+        elPass.oninput = checkPassword;
+        
+        function checkUsername(){
+            //Ternary
+            elUserMsg.innerHTML = (elUser.value.length < 5) ? " Ange minst än 5 tecken" : "";
+            elUserMsg.style.color = 'red';
+            // IF-else
+           /* if(elUser.value.length < 5) // Value hämtar infon från input. innerHTML funkar inte med input
+                elUserMsg.innerHTML = 'Ange minst än 5 tecken'; 
+            else
+                elUserMsg.innerHTML = "";  */
+    }
+        function checkPassword(){
+            if (elPass.value.length < 8) // Value hämtar infon från input. innerHTML funkar inte med input
+                elPassMsg.innerHTML = 'Ange minst 8 tecken';
+            else
+                elPassMsg.innerHTML = '';
+        }
+    </script>   
+</body>
+</html>

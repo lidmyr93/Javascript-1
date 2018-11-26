@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exempel 10</title>
+</head>
+<body>
+    <h1>Exempel 10</h1>
+
+    <button id='btnDate'>Visa Dagens Datum</button>
+    <p id='elDate'></p>
+    <p id='elDate2'></p>
+
+    <script>
+        // Hämta referenser
+        let btnDate = document.getElementById('btnDate');
+
+        // koppla flera events till knapped med event listeners
+        btnDate.addEventListener('click',displayDate);
+        btnDate.addEventListener('click',displayTime);
+
+        function displayDate(){
+            document.getElementById('elDate').innerHTML = new Date().toLocaleDateString();
+        };
+        function displayTime(){
+            document.getElementById('elDate2').innerHTML = new Date().toLocaleTimeString();
+        }
+
+
+    </script>
+    
+</body>
+</html>

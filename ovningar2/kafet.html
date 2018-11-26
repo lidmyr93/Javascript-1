@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cafeet</title>
+</head>
+<body>
+    <script>
+ /*• Det finns ett kafé som erbjuder 10% rabatt
+om man spenderar minst 1000kr på kaffe per
+månad via deras medlemskort.
+• Kostnaden per kaffekopp är i genomsnitt 12kr.
+• Skapa ett program som läser in (via en
+prompt) antalet kaffekoppar man i
+genomsnitt köper per dag.
+• Programmet ska via en dialogruta (alert) visa
+om man har rätt till rabatten och även visa
+hur mycket rabatt man får.
+• Programmet ska visa hur många fler
+kaffekoppar man måste köpa för att få 10%
+rabatt (i fall man har spenderat för lite
+pengar).*/
+        
+        let antal = prompt('Hur många kaffekoppar köper du per dag cirka?');
+        let pris = 12;
+        let rabatt = 0.1;
+        let summa = antal * pris;
+        console.log(summa);
+        if ( summa >= 1000){
+            let totalRabatt = pris * rabatt;
+            alert('Du har rätt till rabbaten\n'+ 'Du får '+ totalRabatt.toFixed(2) +'kr rabbat på varje kaffekopp');
+        }
+        else{
+            let restPris = 1000 - summa;
+            let restantal = restPris/12 + antal;
+            alert('Du behöver köpa ' + Math.ceil(restantal) + ' kaffe till för att få rabbat');
+        }
+        
+        </script>
+</body>
+</html>

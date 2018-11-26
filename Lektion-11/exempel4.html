@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>While och Break</title>
+</head>
+<body>
+    <script>
+        while(value){ // Hit kommer man med continue
+        let value = true;
+            let name = prompt('Vad heter du?');
+            if(name === null){
+                break; // Break sats
+            }
+            if (name === ''){
+                continue; // Continue sats
+            }
+            else{
+            alert('Hej ' + name);
+            value = false;
+            }
+        }// Hit kommer man med break;
+
+        console.log('Hejdå');
+    </script>
+    
+</body>
+</html>

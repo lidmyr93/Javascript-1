@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Maträtt</title>
+</head>
+<body>
+    <h1 id ='food'></h1>
+    <script>
+ /* Skapa en array över dina favoriträtter.
+Programmet ska slumpmässigt välja en
+maträtt (som jag kallar X här nedan)
+Visa på sidan (ej alert) meddelandet.
+”Dagens maträtt är X”.
+På fredagar ska programmet alltid visa
+följande meddelande.
+”Du ska äta ute idag!”*/
+    let food = document.getElementById('food');
+
+    let myFood = ['Pizza','Tacos','Pannkaka','Hamburgare','Oxfile','Lax','Glass','Soppa'];
+    let r = Math.floor(Math.random() * myFood.length)
+    console.log(r);
+    let dag = new Date().getDay();
+    if (dag === 5){
+      food.innerHTML = 'Du ska äta ute idag!'
+    }
+    else{
+        food.innerHTML = 'Dagnes maträtt är ' + myFood[r];
+    } 
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moms</title>
+</head>
+<body>
+    <script>
+/*Skriv ett program som läser in en
+varas pris, exkl. moms.
+Programmet skall också läsa in momssatsen som skall vara ett helt
+antal procent t.ex. 25.
+Programmet skall beräkna dels
+varans pris inkl. moms och dels
+momsen.
+De två resultaten skall visas i en
+dialogruta (alert).
+Använd \n för att lägga till en radbrytning.*/
+
+let pris = +prompt('Vad kostar varan?'); // priset utan moms 100
+let moms = +prompt('Vad var momsen?'); // momsen 25
+let pristotal = pris * (1 + moms);
+let momstotal = pristotal - pris;
+alert('Du betalade ' + momstotal.toFixed(2) + " i moms \n" + 'Priset blev ' + pristotal.toFixed(2) + ' totalt');
+ 
+        
+    
+        </script>
+    
+</body>
+</html>

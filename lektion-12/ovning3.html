@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Övning 3</title>
+</head>
+<body>
+    <p>Stycke 1</p>
+    <p>Stycke 2</p>
+    <p>stycke 3</p>
+    <p>Stycke 4</p>
+    <p>stycke 5</p>
+
+    <script>
+    let p = document.getElementsByTagName('p');
+    console.log(p);
+
+    for( i = 0; i < p.length; i++){
+        p[i].style.textTransform = 'capitalize';
+        p[i].innerHTML += '.';
+    }
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//Steg 1 - läs in data
+let rabattsats = 0.10;
+let min   = prompt ('Hur mycket ringer du i genomsnitt varje månad?');
+let cost  = prompt ('Vad kostar det per minut att ringa?');
+
+// Steg 2 - beräkningar
+let total = min * cost;
+let rabatt = 0;
+if (total >= 1000){
+    rabatt = total * rabattsats;
+    total = total - rabatt;
+}
+// Steg 3 - Visa resultatet
+
+let result = 'Din kostnad per månad är :' + total + 'kr';
+result += '\n';
+result += 'Din rabbat är :' + rabatt + 'kr';
+alert(result);
+
+        </script>
+        
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gymkort</title>
+</head>
+<body>
+    <script>
+       /* 
+Skapa e% program som läser in (via
+en prompt) priset för e% årskort,
+priset för en bilje% samt antalet
+gånger man planerar a% besöka
+gymmet under e% år.
+
+DäreBer skall programmet visa (via
+en alert) om det lönar sig a% köpa
+årskort eller inte. */
+        
+        let prisYear       = prompt ('Vad kostar ett årskort');
+        let prisBiljett    = prompt ('Vad kostar en engångsbiljett');
+        let besok          = prompt ('Hur många gånger tänkte du besöka gymmet under ett år');
+        let biljettKostnad = besok * prisBiljett;
+
+        if (prisYear < biljettKostnad){
+            alert('Köp ett årskort ')
+        }else{
+            alert('Köp inte ett års kort')
+        }
+        
+        </script>
+</body>
+</html>

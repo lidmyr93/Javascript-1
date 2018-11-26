@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p>Stycke 1</p>
+    <p>Stycke 2.</p>
+    <p>Stycke 3</p>
+    <p>Stycke 4</p>
+    <p>Stycke 5.</p>
+    <p>Stycke 6.</p>
+    <p>Stycke 7</p>
+
+    <script>
+        let allP = document.getElementsByTagName('p')
+        console.log(allP);
+
+        for(i = 0; i < allP.length; i++){
+            console.log(allP[i]);
+            if (allP[i].innerHTML.endsWith('.')){
+                continue;
+            }
+            else{
+                allP[i].innerHTML += '.';
+            }
+        }
+    </script>
+    
+</body>
+</html>
